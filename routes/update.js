@@ -24,7 +24,7 @@ const profileSchema = Joi.object({
   profileImages: Joi.array().items(Joi.string()),
 });
 
-router.update("/profile/:id", async (req, res) => {
+router.patch("/profile/:id", async (req, res) => {
   const { id } = req.params;
   // for when I try and call this endpoint in the frontend
   if (!id) {
@@ -58,7 +58,7 @@ router.update("/profile/:id", async (req, res) => {
   res.send({ status: 1, message: "user updated" });
 });
 
-router.update("/account-details/:id", async (req, res) => {
+router.patch("/account-details/:id", async (req, res) => {
   const { id } = req.params;
   //write stuff for updating email and password here
   //validate first - write schema

@@ -10,7 +10,7 @@ router.delete("/:id", (req, res) => {
     return user.id === id;
   });
 
-  if ((userIndex = -1)) {
+  if (userIndex === -1) {
     res.send({ status: 0, reason: "user not found" });
     return;
   }
