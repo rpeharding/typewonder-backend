@@ -17,6 +17,8 @@ module.exports = {
       mainImage: "thisismyimage",
       profileImages: ["profileImage1", "profileImage2"],
       email: "rachel@gmail.com",
+      password:
+        "2eb966329ce601f8ce6f3319a9c478657b9e14e18d613c9cd5092616a5fd104a",
       id: "313fcae6-c97d-4bc8-9fe6-e61f2c8e419c",
     },
     {
@@ -36,6 +38,8 @@ module.exports = {
       mainImage: "thisismyimage",
       profileImages: ["profileImage1", "profileImage2"],
       email: "steve@gmail.com",
+      password:
+        "2eb966329ce601f8ce6f3319a9c478657b9e14e18d613c9cd5092616a5fd104a",
       id: "8a3881d1-f31f-4d82-b7b0-a00f339c4f4d",
     },
     {
@@ -55,6 +59,8 @@ module.exports = {
       mainImage: "thisismyimage",
       profileImages: ["profileImage1", "profileImage2"],
       email: "george@gmail.com",
+      password:
+        "2eb966329ce601f8ce6f3319a9c478657b9e14e18d613c9cd5092616a5fd104a",
       id: "9a432cc6-f326-46b8-a2e0-8c9ee8d0b69c",
     },
   ],

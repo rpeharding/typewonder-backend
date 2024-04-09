@@ -58,12 +58,12 @@ router.patch("/profile/:id", async (req, res) => {
   res.send({ status: 1, message: "user updated" });
 });
 
-router.patch("/account-details/:id", async (req, res) => {
-  const { id } = req.params;
-  //write stuff for updating email and password here
-  //validate first - write schema
-  // do ecnryption and salting
-  // update
-});
+// router.patch("/account-details/:id", async (req, res) => {
+//   const { id } = req.params;
+//   //write stuff for updating email and password here
+//   //validate first - write schema
+//   // do ecnryption and salting
+//   // update
+// });
 
 module.exports = router;
