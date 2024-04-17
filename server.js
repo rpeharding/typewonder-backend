@@ -9,6 +9,7 @@ app.use("/user/delete", require("./routes/delete"));
 app.use("/user/update", require("./routes/update"));
 app.use("/user/login", require("./routes/login"));
 app.use("/user/logout", require("./routes/logout"));
+// app.use("/proxy", require("./routes/proxy"));
 
 const PORT = process.env.PORT || 6001;
 app.listen(PORT, () => {
@@ -16,12 +17,12 @@ app.listen(PORT, () => {
 });
 
 //clean up
-setInterval(() => {
-  users.forEach((user) => {
-    user.token.forEach((token) => {
-      if (token.issueDate + 86400000 < Date.now()) {
-        delete token.token;
-      }
-    });
-  });
-}, 300000);
+// setInterval(() => {
+//   users.forEach((user) => {
+//     user.token.forEach((token) => {
+//       if (token.issueDate + 86400000 < Date.now()) {
+//         delete token.token;
+//       }
+//     });
+//   });
+// }, 300000);

@@ -1,14 +1,15 @@
-const checkToken = (req, res, next) => {
-  const user = req.users.find((user) => {
-    return user.token === Number(req.headers.token);
-  });
+const asyncMySQL = require("./mysql/driver");
+const { checkToken } = require("./mysql/queries");
 
-  if (user) {
+async function checkIsUser(req, res, next) {
+  const results = await asyncMySQL(checkToken(req.headers.token));
+
+  if (results.length) {
     next();
     return;
   }
 
-  res.send({ status: 0, reason: "bad token" });
-};
+  res.send({ status: 0, reason: "Bad token" });
+}
 
-modeule.exports = checkToken;
+module.exports = { checkIsUser, checkToken };
